@@ -72,7 +72,7 @@
                                     </div>
                                 </div>
                                 <!-- string ------------------------------------------------>
-                                <div ng-if="oMetap.Type == 'String' || oMetap.Type == 'Integer' || oMetap.Type == 'Decimal'" class="form-group" id="{{oMetap.Name}}-group"
+                                <div ng-if="oMetap.Type == 'String' || oMetap.Type == 'Enlace' || oMetap.Type == 'Integer' || oMetap.Type == 'Decimal'" class="form-group" id="{{oMetap.Name}}-group"
                                      ng-class="{'has-error':(outerForm[oMetap.Name].$error.pattern && !outerForm[oMetap.Name].$pristine) ||
                                                              (outerForm[oMetap.Name].$error.required && !outerForm[oMetap.Name].$pristine)}">
                                     <label class="control-label col-sm-2" for="{{oMetap.Name}}">
