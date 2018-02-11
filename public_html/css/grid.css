@@ -116,6 +116,50 @@ body {
     grid-gap: 10px;
 }
 
+.containerlogin{
+   display: grid;
+    grid-template-columns: 275px 275px 275px 275px;
+    grid-template-rows: 100px 200px 225px;
+    grid-template-areas: 
+        "homeheader homeheader homeheader homeheader"
+        ". . logindrop ."
+        ". . logindrop ."
+        ". . logindrop .";
+    grid-gap: 10px;
+}
+
+/*Fin containers*/
+
+/*login*/
+#logindrop {
+    text-align: left;
+    grid-area: logindrop;
+   
+}
+
+#droplogin {
+  
+    position: relative;
+    display: inline-block;
+
+}
+
+#loginform {
+    grid-area: loginform;
+    background-color: black;
+}
+
+.loginheader {
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: left;
+    color: white;
+    grid-area: homeheader;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+/*finlogin*/
+
 .iconoC {
     text-align: right;
     grid-area: iconoC;
@@ -179,6 +223,36 @@ body {
             "carousel carousel noticia1 noticia1";
         grid-gap: 10px;
     }
+        .containerlicense{
+        display: grid;
+        grid-template-columns: 275px auto auto auto;
+        grid-template-rows: 200px auto auto auto;
+        grid-template-areas: 
+            "homeheader homeheader iconoC ."
+            "carousel carousel noticia1 noticia1"
+            "carousel carousel noticia1 noticia1"
+            "carousel carousel noticia1 noticia1";
+        grid-gap: 10px;
+    }
+  
+       .iconoC {
+        text-align: left;
+    }
+       .containerlogin{
+        display: grid;
+        grid-template-columns: 275px auto auto auto;
+        grid-template-rows: 100px 200px 225px;
+        grid-template-areas: 
+            "homeheader homeheader homeheader homeheader"
+            "logindrop . . ."
+            "logindrop . . .";
+        grid-gap: 10px;
+    }
+    
+      
+
+    
+
 
 }
 
@@ -195,9 +269,38 @@ body {
             "noticia1 noticia1 . .";
         grid-gap: 10px;
     }
+     .containerlicense{
+        display: grid;
+        grid-template-columns: 275px auto auto auto;
+        grid-template-rows: 200px auto auto auto;
+        grid-template-areas: 
+            "homeheader homeheader . ."
+            "iconoC . . ."
+            "carousel carousel . ."
+            "noticia1 noticia1 . .";
+        grid-gap: 10px;
+    }
+    
+    .iconoC {
+        text-align: left;
+    }
+
 
     #imagenhome {
         position: static;
     }
+    
+     .containerlogin{
+        display: grid;
+        grid-template-columns: 275px auto auto auto;
+        grid-template-rows: 150px 200px 225px;
+        grid-template-areas: 
+            "homeheader homeheader homeheader homeheader"
+            "logindrop . . ."
+            "logindrop . . .";
+        grid-gap: 10px;
+    }
+    
+    
 }
 
