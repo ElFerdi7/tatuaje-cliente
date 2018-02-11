@@ -71,6 +71,10 @@ background-color: #1d0808 !important;}
     transform: scale(2.5); 
 }
 
+.table {
+    overflow-x: auto !important;
+}
+
 
 
 html {
