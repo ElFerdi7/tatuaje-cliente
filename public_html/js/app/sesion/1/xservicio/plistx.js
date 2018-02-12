@@ -36,7 +36,7 @@ moduloSesion.controller('SesionXservicioPList1Controller',
                 $scope.xob = "servicio";
                 $scope.xid = $routeParams.id;
                 //----
-                $scope.url = $scope.ob + '/' + $scope.profile + '/' + $scope.op + $scope.xob + '/' + $scope.xid;
+               $scope.url = $scope.ob + '/' + $scope.profile + '/xservicio/' + $scope.op + '/' + $scope.xid;
                 //----
                 $scope.numpage = toolService.checkDefault(1, $routeParams.page);
                 $scope.rpp = toolService.checkDefault(10, $routeParams.rpp);

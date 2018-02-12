@@ -7,7 +7,7 @@
     <th ng-repeat="field in metap" ng-if="field.IsVisible && field.Type != 'Id'" class="text-center" style="border-color:#ddd;">                                            
         <label>{{field.ShortName}}</label><br/>
         <i ng-if="field.IsVisible && field.Type == 'Link'" class="fa fa-hand-o-down"></i>
-        <i ng-if="field.IsVisible && field.Type == 'Calculated'" class="fa fa-hand-o-down"></i>   
+        <i ng-if="field.IsVisible && field.Type == 'Calculated'" class="fa fa-user-circle-o"></i>   
         <a ng-if="field.IsVisible && field.Type != 'Link' && field.Type != 'Calculated' && field.Type == 'ForeignObject'" ng-click="doorder('id_' + field.References, 'asc')"><i class="glyphicon glyphicon-arrow-up"></i></a>
         <a ng-if="field.IsVisible && field.Type != 'Link' && field.Type != 'Calculated' && field.Type == 'ForeignObject'" ng-click="doorder('id_' + field.References, 'desc')"><i class="glyphicon glyphicon-arrow-down"></i></a>                
         <a ng-if="field.IsVisible && field.Type != 'Link' && field.Type != 'Calculated' && field.Type != 'ForeignObject'" ng-click="doorder(field.Name, 'asc')"><i class="glyphicon glyphicon-arrow-up"></i></a>
