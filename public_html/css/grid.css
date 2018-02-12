@@ -133,6 +133,18 @@ body {
     grid-gap: 10px;
 }
 
+.containerlogout{
+   display: grid;
+    grid-template-columns: 275px 275px 275px 275px;
+    grid-template-rows: 100px 200px 225px 225px;
+    grid-template-areas: 
+        "homeheader homeheader homeheader homeheader"
+        ". logoutmain logoutmain ."
+        ". logoutmain logoutmain ."
+        ". logoutmain logoutmain .";
+    grid-gap: 10px;
+}
+
 /*Fin containers*/
 
 /*login*/
@@ -169,6 +181,14 @@ body {
 }
 
 /*finlogin*/
+
+/*logout*/
+
+#logoutmain {
+    grid-area: logoutmain;
+}
+
+/*fin logout*/
 
 .iconoC {
     text-align: right;
