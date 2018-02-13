@@ -145,6 +145,17 @@ body {
     grid-gap: 10px;
 }
 
+.containerpasschange{
+   display: grid;
+    grid-template-columns: 275px 275px 275px 275px;
+    grid-template-rows: 100px 200px 225px 225px;
+    grid-template-areas: 
+        "homeheader homeheader homeheader homeheader"
+        ". passchange passchange ."
+        ". passchange passchange ."
+        ". passchange passchange .";
+    grid-gap: 10px;
+}
 /*Fin containers*/
 
 /*login*/
@@ -188,9 +199,22 @@ body {
     grid-area: logoutmain;
     color: white;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    z-index: 1;
 }
 
 /*fin logout*/
+
+/*passchange*/
+#passchangemain {
+    grid-area: passchange;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    z-index: 1;
+}
+#passchange {
+    grid-area: passchange;
+}
+/*finpasschange*/
 
 .iconoC {
     text-align: right;
@@ -249,11 +273,12 @@ body {
         grid-template-columns: 275px auto auto auto;
         grid-template-rows: 200px auto auto auto;
         grid-template-areas: 
-            "homeheader homeheader imagenhome imagenhome"
+            "homeheader homeheader imagenhome ."
             "carousel carousel noticia1 noticia1"
             "carousel carousel noticia1 noticia1"
             "carousel carousel noticia1 noticia1";
         grid-gap: 10px;
+        margin-top: 40px;
     }
         .containerlicense{
         display: grid;
@@ -265,6 +290,7 @@ body {
             "carousel carousel noticia1 noticia1"
             "carousel carousel noticia1 noticia1";
         grid-gap: 10px;
+        margin-top: 40px;
     }
   
        .iconoC {
@@ -276,10 +302,24 @@ body {
         grid-template-rows: 100px 200px 225px 250px;
         grid-template-areas: 
             "homeheader homeheader homeheader homeheader"
-            "logindrop . . ."
-            "logindrop . . ."
-            "logindrop . . .";
+            ". logindrop logindrop ."
+            ". logindrop logindrop ."
+            ". logindrop logindrop .";
         grid-gap: 10px;
+        margin-top: 40px;
+    }
+    
+    .containerpasschange{
+        display: grid;
+        grid-template-columns: 275px auto auto auto;
+        grid-template-rows: 100px 200px 225px 250px;
+        grid-template-areas: 
+            "homeheader homeheader homeheader homeheader"
+            ". passchange passchange ."
+            ". passchange passchange ."
+            ". passchange passchange .";
+        grid-gap: 10px;
+        margin-top: 40px;
     }
     
       
@@ -333,6 +373,18 @@ body {
             "logindrop . . ."
             "logindrop . . .";
         grid-gap: 10px;
+    }
+    
+    .containerpasschange{
+        display: grid;
+        grid-template-columns: 275px auto auto auto;
+        grid-template-rows: 100px 200px 225px 250px;
+        grid-template-areas: 
+            "homeheader homeheader . ."
+            "passchange . . ."
+            "passchange . . ."
+            "passchange . . .";
+        grid-gap: 20px;
     }
     
     
