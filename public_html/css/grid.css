@@ -216,6 +216,8 @@ body {
 }
 /*finpasschange*/
 
+/*css generico*/
+
 .iconoC {
     text-align: right;
     grid-area: iconoC;
@@ -263,7 +265,10 @@ body {
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
+/*fin css generico*/
 
+
+/*media para 992*/
 @media all and (max-width: 992px) {
 
 
