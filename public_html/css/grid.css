@@ -83,7 +83,7 @@ background-color: #1d0808 !important;}
 
 
 html {
-    background-image: url("../images/fondo2.jpg") !important;
+    background-image: url("../images/fondo3.jpg") !important;
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -91,7 +91,7 @@ html {
 
 body {
     margin: 40px;
-    background-image: url("../images/fondo2.jpg") !important;
+    background-image: url("../images/fondo3.jpg") !important;
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -186,6 +186,8 @@ body {
 
 #logoutmain {
     grid-area: logoutmain;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 /*fin logout*/
