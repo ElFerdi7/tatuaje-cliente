@@ -51,7 +51,7 @@ nav {
 
 .dropdown-menu > .disabled > a, .dropdown-menu > .disabled > a:hover, .dropdown-menu > .disabled > a:focus {
     color: #98aead;
-background-color: #1d0808 !important;}
+    background-color: #1d0808 !important;}
 .dropdown-menu > .disabled > a:hover, .dropdown-menu > .disabled > a:focus {
     text-decoration: none;
     background-color: #1d0808 !important;;
@@ -97,6 +97,18 @@ body {
 
 }
 /*Containers*/
+.containerperfil{
+    display: grid;
+    grid-template-columns: 275px 275px 275px;
+    grid-template-rows: 200px 200px 200px;
+    grid-row-end: -1;
+    grid-template-areas: 
+        "homeheader homeheader homeheader homeheader"
+        ". tablemain tablemain ."
+        ". perfilbotones perfilbotones .";
+    grid-gap: 10px;
+}
+
 .containerhome{
     display: grid;
     grid-template-columns: 275px 275px 275px 275px;
@@ -122,36 +134,36 @@ body {
 }
 
 .containerlogin{
-   display: grid;
+    display: grid;
     grid-template-columns: 275px 275px 275px 275px;
-    grid-template-rows: 100px 200px 225px 225px;
+    grid-template-rows: 100px 200px 225px;
+    grid-row-end: -1;
     grid-template-areas: 
         "homeheader homeheader homeheader homeheader"
-        ". logindrop logindrop ."
         ". logindrop logindrop ."
         ". logindrop logindrop .";
     grid-gap: 10px;
 }
 
 .containerlogout{
-   display: grid;
-    grid-template-columns: 275px 275px 275px 275px;
-    grid-template-rows: 100px 200px 225px 225px;
+    display: grid;
+    grid-template-columns: 275px 275px 275px;
+    grid-template-rows: 100px 200px 225px;
+    grid-row-end: -1;
     grid-template-areas: 
         "homeheader homeheader homeheader homeheader"
-        ". logoutmain logoutmain ."
         ". logoutmain logoutmain ."
         ". logoutmain logoutmain .";
     grid-gap: 10px;
 }
 
 .containerpasschange{
-   display: grid;
-    grid-template-columns: 275px 275px 275px 275px;
-    grid-template-rows: 100px 200px 225px 225px;
+    display: grid;
+    grid-template-columns: 275px 275px 275px;
+    grid-template-rows: 100px 200px 225px;
+    grid-row-end: -1;
     grid-template-areas: 
         "homeheader homeheader homeheader homeheader"
-        ". passchange passchange ."
         ". passchange passchange ."
         ". passchange passchange .";
     grid-gap: 10px;
@@ -164,14 +176,14 @@ body {
     grid-area: logindrop;
     color: white;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-   
+
 }
 
 #droplogin {
-  
+
     position: relative;
     display: inline-block;
- 
+
 
 }
 
@@ -216,6 +228,19 @@ body {
 }
 /*finpasschange*/
 
+/*perfil*/
+
+#tablemain {
+    grid-area: tablemain;
+}
+
+#perfilbotones {
+    grid-area: perfilbotones;
+    margin-right: 18px;
+}
+
+/*finperfil*/
+
 /*css generico*/
 
 .iconoC {
@@ -223,7 +248,7 @@ body {
     grid-area: iconoC;
     color: white;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    
+
 }
 .item {
     padding: 15px;
@@ -265,13 +290,53 @@ body {
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
+/*CSS PARA TABLA*/
+.table-bordered {
+    background-color: #182444;
+    border: 2px black solid !important;
+    color: #d6d6d6;
+}
+
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+    background-color: #5a1e1e;
+}
+
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+    background-color: #5a1e1e;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+    background-color: #5f521a;
+}
+
+.table-bordered td {
+    border: 2px black solid !important;
+}
+
+.table-bordered tr {
+    border: 2px black solid !important;
+}
+
+
+/*FIN CSS PARA TABLA*/
+
 /*fin css generico*/
 
 
 /*media para 992*/
 @media all and (max-width: 992px) {
 
-
+    .containerperfil{
+        display: grid;
+        grid-template-columns: 275px auto auto;
+        grid-template-rows: 200px 200px 200px;
+        grid-row-end: -1;
+        grid-template-areas: 
+            "homeheader homeheader homeheader"
+            ". tablemain . "
+            ". perfilbotones . ";
+        grid-gap: 10px;
+    }
 
     .containerhome{
         display: grid;
@@ -285,7 +350,7 @@ body {
         grid-gap: 10px;
         margin-top: 40px;
     }
-        .containerlicense{
+    .containerlicense{
         display: grid;
         grid-template-columns: 275px auto auto auto;
         grid-template-rows: 200px auto auto auto;
@@ -297,39 +362,52 @@ body {
         grid-gap: 10px;
         margin-top: 40px;
     }
-  
-       .iconoC {
+
+    .iconoC {
         text-align: left;
     }
-       .containerlogin{
+    .containerlogin{
         display: grid;
-        grid-template-columns: 275px auto auto auto;
-        grid-template-rows: 100px 200px 225px 250px;
+        grid-template-columns: 275px auto auto;
+        grid-template-rows: 100px 200px 225px;
+        grid-row-end: -1;
         grid-template-areas: 
             "homeheader homeheader homeheader homeheader"
-            ". logindrop logindrop ."
             ". logindrop logindrop ."
             ". logindrop logindrop .";
         grid-gap: 10px;
         margin-top: 40px;
     }
-    
-    .containerpasschange{
+
+    .containerlogout{
         display: grid;
-        grid-template-columns: 275px auto auto auto;
-        grid-template-rows: 100px 200px 225px 250px;
+        grid-template-columns: 275px auto auto;
+        grid-template-rows: 100px 200px 225px;
+        grid-row-end: -1;
         grid-template-areas: 
             "homeheader homeheader homeheader homeheader"
-            ". passchange passchange ."
+            ". logoutmain logoutmain ."
+            ". logoutmain logoutmain .";
+        grid-gap: 10px;
+        margin-top: 40px;
+    }
+
+    .containerpasschange{
+        display: grid;
+        grid-template-columns: 275px auto auto;
+        grid-template-rows: 100px 200px 225px;
+        grid-row-end: -1;
+        grid-template-areas: 
+            "homeheader homeheader homeheader homeheader"
             ". passchange passchange ."
             ". passchange passchange .";
         grid-gap: 10px;
         margin-top: 40px;
     }
-    
-      
 
-    
+
+
+
 
 
 }
@@ -347,7 +425,7 @@ body {
             "noticia1 noticia1 . .";
         grid-gap: 10px;
     }
-     .containerlicense{
+    .containerlicense{
         display: grid;
         grid-template-columns: 275px auto auto auto;
         grid-template-rows: 200px auto auto auto;
@@ -358,7 +436,7 @@ body {
             "noticia1 noticia1 . .";
         grid-gap: 10px;
     }
-    
+
     .iconoC {
         text-align: left;
     }
@@ -367,31 +445,55 @@ body {
     #imagenhome {
         position: static;
     }
-    
-     .containerlogin{
+
+    .containerlogin{
         display: grid;
-        grid-template-columns: 275px auto auto auto;
-        grid-template-rows: 150px 200px 225px 250px;
+        grid-template-columns: 275px auto auto ;
+        grid-template-rows: 150px 200px 225px ;
+        grid-row-end: -1;
         grid-template-areas: 
-            "homeheader homeheader homeheader homeheader"
-            "logindrop . . ."
+            "homeheader homeheader . ."
             "logindrop . . ."
             "logindrop . . .";
         grid-gap: 10px;
     }
-    
+
+    .containerlogout{
+        display: grid;
+        grid-template-columns: 275px auto auto;
+        grid-template-rows: 100px 200px 225px;
+        grid-row-end: -1;
+        grid-template-areas: 
+            "homeheader homeheader homeheader homeheader"
+            "logoutmain . . ."
+            "logoutmain . . .";
+        grid-gap: 10px;
+    }
+
     .containerpasschange{
         display: grid;
-        grid-template-columns: 275px auto auto auto;
-        grid-template-rows: 100px 200px 225px 250px;
+        grid-template-columns: 275px auto auto;
+        grid-template-rows: 100px 200px 225px;
+        grid-row-end: -1;
         grid-template-areas: 
             "homeheader homeheader . ."
-            "passchange . . ."
             "passchange . . ."
             "passchange . . .";
         grid-gap: 20px;
     }
-    
-    
+
+    .containerperfil{
+        display: grid;
+        grid-template-columns: 275px auto auto;
+        grid-template-rows: 200px 200px 200px ;
+        grid-row-end: -1;
+        grid-template-areas: 
+            "homeheader homeheader ."
+            "tablemain tablemain ."
+            "perfilbotones . .";
+        grid-gap: 10px;
+    }
+
+
 }
 
