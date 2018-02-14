@@ -100,7 +100,7 @@ body {
 .containerperfil{
     display: grid;
     grid-template-columns: 275px 275px 275px;
-    grid-template-rows: 200px 200px 200px;
+    grid-template-rows: 200px 200px 200px 225px;
     grid-row-end: -1;
     grid-template-areas: 
         "homeheader homeheader homeheader homeheader"
@@ -136,7 +136,7 @@ body {
 .containerlogin{
     display: grid;
     grid-template-columns: 275px 275px 275px 275px;
-    grid-template-rows: 100px 200px 225px;
+    grid-template-rows: 100px 200px 225px 225px;
     grid-row-end: -1;
     grid-template-areas: 
         "homeheader homeheader homeheader homeheader"
@@ -148,7 +148,7 @@ body {
 .containerlogout{
     display: grid;
     grid-template-columns: 275px 275px 275px;
-    grid-template-rows: 100px 200px 225px;
+    grid-template-rows: 100px 200px 225px 225px;
     grid-row-end: -1;
     grid-template-areas: 
         "homeheader homeheader homeheader homeheader"
@@ -160,7 +160,7 @@ body {
 .containerpasschange{
     display: grid;
     grid-template-columns: 275px 275px 275px;
-    grid-template-rows: 100px 200px 225px;
+    grid-template-rows: 100px 200px 225px 225px;
     grid-row-end: -1;
     grid-template-areas: 
         "homeheader homeheader homeheader homeheader"
@@ -329,13 +329,14 @@ body {
     .containerperfil{
         display: grid;
         grid-template-columns: 275px auto auto;
-        grid-template-rows: 200px 200px 200px;
+        grid-template-rows: 200px 200px 200px 225px;
         grid-row-end: -1;
         grid-template-areas: 
             "homeheader homeheader homeheader"
             ". tablemain . "
             ". perfilbotones . ";
         grid-gap: 10px;
+         margin-top: 40px;
     }
 
     .containerhome{
@@ -369,8 +370,7 @@ body {
     .containerlogin{
         display: grid;
         grid-template-columns: 275px auto auto;
-        grid-template-rows: 100px 200px 225px;
-        grid-row-end: -1;
+        grid-template-rows: 100px 200px 225px 225px;
         grid-template-areas: 
             "homeheader homeheader homeheader homeheader"
             ". logindrop logindrop ."
@@ -382,8 +382,7 @@ body {
     .containerlogout{
         display: grid;
         grid-template-columns: 275px auto auto;
-        grid-template-rows: 100px 200px 225px;
-        grid-row-end: -1;
+        grid-template-rows: 100px 200px 225px 225px;
         grid-template-areas: 
             "homeheader homeheader homeheader homeheader"
             ". logoutmain logoutmain ."
@@ -395,8 +394,7 @@ body {
     .containerpasschange{
         display: grid;
         grid-template-columns: 275px auto auto;
-        grid-template-rows: 100px 200px 225px;
-        grid-row-end: -1;
+        grid-template-rows: 100px 200px 225px 225px;
         grid-template-areas: 
             "homeheader homeheader homeheader homeheader"
             ". passchange passchange ."
@@ -449,7 +447,7 @@ body {
     .containerlogin{
         display: grid;
         grid-template-columns: 275px auto auto ;
-        grid-template-rows: 150px 200px 225px ;
+        grid-template-rows: 150px 200px 225px 225px;
         grid-row-end: -1;
         grid-template-areas: 
             "homeheader homeheader . ."
@@ -461,7 +459,7 @@ body {
     .containerlogout{
         display: grid;
         grid-template-columns: 275px auto auto;
-        grid-template-rows: 100px 200px 225px;
+        grid-template-rows: 100px 200px 225px 225px;
         grid-row-end: -1;
         grid-template-areas: 
             "homeheader homeheader homeheader homeheader"
@@ -473,7 +471,7 @@ body {
     .containerpasschange{
         display: grid;
         grid-template-columns: 275px auto auto;
-        grid-template-rows: 100px 200px 225px;
+        grid-template-rows: 100px 200px 225px 225px;
         grid-row-end: -1;
         grid-template-areas: 
             "homeheader homeheader . ."
@@ -485,7 +483,7 @@ body {
     .containerperfil{
         display: grid;
         grid-template-columns: 275px auto auto;
-        grid-template-rows: 200px 200px 200px ;
+        grid-template-rows: 200px 200px 200px 225px;
         grid-row-end: -1;
         grid-template-areas: 
             "homeheader homeheader ."
