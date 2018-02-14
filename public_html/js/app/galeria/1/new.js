@@ -28,8 +28,8 @@
 'use strict';
 
 moduloGaleria.controller('GaleriaNew1Controller',
-        ['$scope', '$routeParams', '$location', 'serverCallService', '$filter', '$uibModal', 'sessionService', '$route', 'toolService', 'constantService', 'fileUpload',
-            function ($scope, $routeParams, $location, serverCallService, $filter, $uibModal, sessionService, $route, toolService, constantService, fileUpload) {
+        ['$scope', '$routeParams', '$location', 'serverCallService', '$filter', '$uibModal', 'sessionService', '$route', 'toolService', 'constantService',
+            function ($scope, $routeParams, $location, serverCallService, $filter, $uibModal, sessionService, $route, toolService, constantService) {
                 $scope.ob = "galeria";
                 $scope.op = "new";
                 $scope.profile = 1;
@@ -37,6 +37,7 @@ moduloGaleria.controller('GaleriaNew1Controller',
                 $scope.status = null;
                 $scope.debugging = constantService.debugging();
                 $scope.url = $scope.ob + '/' + $scope.profile + '/' + $scope.op;
+                 $scope.subida = "http://127.0.0.1:8081/images/";
                 //---
                 serverCallService.getMeta($scope.ob).then(function (response) {
                     if (response.status == 200) {
@@ -91,13 +92,7 @@ moduloGaleria.controller('GaleriaNew1Controller',
                     $location.path('/home');
                 };
                 
-                 $scope.uploadFile = function () {
-                    var file = $scope.myFile;
-                    console.log('file is ');
-                    console.dir(file);
-                    var uploadUrl = ".//..//webapps//images//";
-                    fileUpload.uploadFileToUrl(file, uploadUrl);
-                };
+               
             }
         ]);
 

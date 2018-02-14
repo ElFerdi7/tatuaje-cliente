@@ -37,6 +37,7 @@ moduloGaleria.controller('GaleriaNew2Controller',
                 $scope.status = null;
                 $scope.debugging = constantService.debugging();
                 $scope.url = $scope.ob + '/' + $scope.profile + '/' + $scope.op;
+                 $scope.subida = "http://127.0.0.1:8081/images/";
                 //---
                 serverCallService.getMeta($scope.ob).then(function (response) {
                     if (response.status == 200) {
