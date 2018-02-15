@@ -111,7 +111,7 @@
                                         <input type="text"
                                                class="form-control"
                                                id="{{oMetap.Name}}"
-                                               name="{{oMetap.Name}}"
+                                               name="enlace"
                                                ng-model="bean[oMetap.Name]"
                                                ng-pattern="oMetap.RegexPattern"
                                                placeholder="{{oMetap.Description}}"
@@ -140,7 +140,7 @@
                                     </label>
                                     <div  class="control col-md-{{oMetap.Width}}">
 
-                                        <input type="file" name="file" id="file"  onchange="angular.element(this).scope().setFile(this)"/>{{theFile.name}}<br/><br/>
+                                        <input ng-click="outerForm.enlace.$setDirty()" type="file" name="file" id="file"  onchange="angular.element(this).scope().setFile(this)"/>{{theFile.name}}<br/><br/>
                                         <input type="submit" value="upload file" /><br/>
 
                                         <span class="help-block" ng-if="!outerForm[oMetap.Name].$pristine && outerForm[oMetap.Name].$error.required">El campo es obligatorio</span>
