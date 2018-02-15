@@ -97,6 +97,18 @@ body {
 
 }
 /*Containers*/
+.containerview{
+    display: grid;
+    grid-template-columns: 275px 275px 275px 275px;
+    grid-template-rows: 200px 200px 200px 225px;
+    grid-row-end: -1;
+    grid-template-areas: 
+        "homeheader homeheader homeheader homeheader"
+        ". viewtabla viewtabla ."
+        ". viewtabla viewtabla ."
+        ". . viewbotones2 viewbotones2";
+    grid-gap: 10px;
+}
 .containerperfil{
     display: grid;
     grid-template-columns: 275px 275px 275px;
@@ -148,7 +160,7 @@ body {
 .containerlogout{
     display: grid;
     grid-template-columns: 275px 275px 275px;
-    grid-template-rows: 100px 200px 225px 225px;
+    grid-template-rows: 100px 200px 225px ;
     grid-row-end: -1;
     grid-template-areas: 
         "homeheader homeheader homeheader homeheader"
@@ -289,6 +301,7 @@ body {
     color: white;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
+/*fin css generico*/
 
 /*CSS PARA TABLA*/
 .table-bordered {
@@ -317,10 +330,28 @@ body {
     border: 2px black solid !important;
 }
 
+.table-bordered > thead > tr > th {
+    border: 2px black solid !important;
+}
 
 /*FIN CSS PARA TABLA*/
 
-/*fin css generico*/
+/*css para view*/
+#viewbotones1 {
+    grid-area: viewbotones1;
+}
+
+#viewtabla {
+    grid-area: viewtabla;
+}
+
+#viewbotones2 {
+    grid-area: viewbotones2;
+}
+
+/*fin cs para view*/
+
+
 
 
 /*media para 992*/
@@ -336,7 +367,7 @@ body {
             ". tablemain . "
             ". perfilbotones . ";
         grid-gap: 10px;
-         margin-top: 40px;
+        margin-top: 40px;
     }
 
     .containerhome{
@@ -401,6 +432,19 @@ body {
             ". passchange passchange .";
         grid-gap: 10px;
         margin-top: 40px;
+    }
+
+    .containerview{
+        display: grid;
+        grid-template-columns: 275px auto auto auto;
+        grid-template-rows: 200px auto auto auto;
+        grid-row-end: -1;
+        grid-template-areas: 
+            "homeheader homeheader homeheader homeheader"
+            ". viewtabla viewtabla ."
+            ". viewtabla viewtabla ."
+            ". viewbotones2 viewbotones2 .";
+        grid-gap: 10px;
     }
 
 
@@ -489,6 +533,19 @@ body {
             "homeheader homeheader ."
             "tablemain tablemain ."
             "perfilbotones . .";
+        grid-gap: 10px;
+    }
+    
+    .containerview{
+        display: grid;
+        grid-template-columns: 275px auto auto auto;
+        grid-template-rows: 200px auto auto auto;
+        grid-row-end: -1;
+        grid-template-areas: 
+            "homeheader homeheader homeheader homeheader"
+            "viewtabla viewtabla . ."
+            "viewtabla viewtabla . ."
+            "viewbotones2 viewbotones2 . .";
         grid-gap: 10px;
     }
 
