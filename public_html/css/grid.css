@@ -160,7 +160,7 @@ body {
 .containerlogout{
     display: grid;
     grid-template-columns: 275px 275px 275px;
-    grid-template-rows: 100px 200px 225px ;
+    grid-template-rows: 100px 200px 225px 225px;
     grid-row-end: -1;
     grid-template-areas: 
         "homeheader homeheader homeheader homeheader"
@@ -445,6 +445,7 @@ body {
             ". viewtabla viewtabla ."
             ". viewbotones2 viewbotones2 .";
         grid-gap: 10px;
+         margin-top: 40px;
     }
 
 
