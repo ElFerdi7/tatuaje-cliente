@@ -130,27 +130,20 @@
                                 </div>
 
                                 <!-- imagenes ------------------------------------------------>
-                                <div ng-if="oMetap.Type == 'Enlace'"  class="form-group" id="{{oMetap.Name}}-group"
-                                     ng-class="{'has-error':(outerForm[oMetap.Name].$error.pattern && !outerForm[oMetap.Name].$pristine) ||
-                                                             (outerForm[oMetap.Name].$error.required && !outerForm[oMetap.Name].$pristine)}">
+                                <div ng-if="oMetap.Type == 'Enlace'"  class="form-group">
                                     <label class="control-label col-sm-2" for="{{oMetap.Name}}">
-                                        <span ng-if="oMetap.IsRequired">*</span>
+                                      
                                         Subida imágen
 
                                     </label>
                                     <div  class="control col-md-{{oMetap.Width}}">
 
-                                        <input ng-click="outerForm.enlace.$setDirty()" type="file" name="file" id="file"  onchange="angular.element(this).scope().setFile(this)"/>{{theFile.name}}<br/><br/>
+                                        <input ng-click="outerForm.enlace.$setDirty()" type="file" name="file" id="file"  onchange="angular.element(this).scope().setFile(this)"/><br/><br/>
                                         <input type="submit" value="upload file" /><br/>
 
-                                        <span class="help-block" ng-if="!outerForm[oMetap.Name].$pristine && outerForm[oMetap.Name].$error.required">El campo es obligatorio</span>
-                                        <span class="help-block" ng-if="!outerForm[oMetap.Name].$pristine && outerForm[oMetap.Name].$error.pattern">El campo no tiene formato adecuado: Introduzca {{oMetap.RegexHelp}}</span>
+                                        
                                     </div>
-                                    <div class="control col-md-1 alert alert-success" ng-if="debugging == 2">
-                                        pristine:{{outerForm[oMetap.Name].$pristine}}<br>
-                                        required:{{outerForm[oMetap.Name].$error.required}}<br>
-                                        valid:{{outerForm[oMetap.Name].$valid}}<br>
-                                    </div>
+                                   
                                 </div>
                                 <!-- date ------------------------------------------------>
                                 <div ng-if="oMetap.Type == 'Date'" class="form-group" id="{{oMetap.Name}}-group"
