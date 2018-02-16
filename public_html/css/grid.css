@@ -106,7 +106,7 @@ body {
         "homeheader homeheader homeheader homeheader"
         ". viewtabla viewtabla ."
         ". viewtabla viewtabla ."
-        ". . viewbotones2 viewbotones2";
+        ". . . viewbotones2";
     grid-gap: 10px;
 }
 .containerperfil{
@@ -347,6 +347,9 @@ body {
 
 #viewbotones2 {
     grid-area: viewbotones2;
+    display: flex;
+    flex-wrap: wrap;
+   
 }
 
 /*fin cs para view*/
