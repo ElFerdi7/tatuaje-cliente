@@ -99,33 +99,6 @@
                                         valid:{{outerForm[oMetap.Name].$valid}}<br>
                                     </div>
                                 </div>
-                                <!-- enlace ------------------------------------------------>
-                                <div ng-if="oMetap.Type == 'Enlace'" class="form-group" id="{{oMetap.Name}}-group"
-                                     ng-class="{'has-error':(outerForm[oMetap.Name].$error.pattern && !outerForm[oMetap.Name].$pristine) ||
-                                                             (outerForm[oMetap.Name].$error.required && !outerForm[oMetap.Name].$pristine)}">
-                                   
-                                    <div class="control col-md-{{oMetap.Width}}">
-                                        <input type="hidden"
-                                               class="form-control"
-                                               id="{{oMetap.Name}}"
-                                               name="enlace"
-                                               ng-model="bean[oMetap.Name]"
-                                               ng-pattern="oMetap.RegexPattern"
-                                               placeholder="{{oMetap.Description}}"
-                                               maxlength="{{oMetap.MaxLength}}"
-                                               ng-required="oMetap.IsRequired"
-                                               ng-value="subida"
-                                               disabled
-                                               />
-                                        <span class="help-block" ng-if="!outerForm[oMetap.Name].$pristine && outerForm[oMetap.Name].$error.required">El campo es obligatorio</span>
-                                        <span class="help-block" ng-if="!outerForm[oMetap.Name].$pristine && outerForm[oMetap.Name].$error.pattern">El campo no tiene formato adecuado: Introduzca {{oMetap.RegexHelp}}</span>
-                                    </div>
-                                    <div class="control col-md-1 alert alert-success" ng-if="debugging == 2">
-                                        pristine:{{outerForm[oMetap.Name].$pristine}}<br>
-                                        required:{{outerForm[oMetap.Name].$error.required}}<br>
-                                        valid:{{outerForm[oMetap.Name].$valid}}<br>
-                                    </div>
-                                </div>
 
                                 <!-- imagenes ------------------------------------------------>
                                 <div ng-if="oMetap.Type == 'Enlace'"  class="form-group">

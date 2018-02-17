@@ -37,7 +37,18 @@ moduloBoceto.controller('BocetoNew2Controller',
                 $scope.status = null;
                 $scope.debugging = constantService.debugging();
                 $scope.url = $scope.ob + '/' + $scope.profile + '/' + $scope.op;
-                 $scope.subida = "http://127.0.0.1:8085/images/";
+                 
+                  var reinols;
+                $scope.setFile = function (element) {
+                    $scope.$apply(function ($scope) {
+                        $scope.theFile = element.files[0];
+
+
+                        $scope.subida = "http://127.0.0.1:8085/images/" + $scope.theFile.name;
+                        reinols = $scope.subida;
+
+                    });
+                };
                 //---
                 serverCallService.getMeta($scope.ob).then(function (response) {
                     if (response.status == 200) {
@@ -67,6 +78,7 @@ moduloBoceto.controller('BocetoNew2Controller',
                 });
                 //--
                 $scope.save = function () {
+                    $scope.bean.enlace = reinols;
                     var jsonToSend = {json: JSON.stringify(toolService.array_identificarArray($scope.bean))};
                     serverCallService.set($scope.ob, jsonToSend).then(function (response) {
                         if (response.status == 200) {
