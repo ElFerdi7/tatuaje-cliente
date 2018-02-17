@@ -103,7 +103,7 @@ body {
     grid-template-rows: 200px 200px 200px 225px;
     grid-row-end: -1;
     grid-template-areas: 
-        "homeheader homeheader homeheader homeheader"
+        "viewheader viewheader viewheader viewheader"
         ". viewtabla viewtabla ."
         ". viewtabla viewtabla ."
         ". . . viewbotones2";
@@ -212,6 +212,15 @@ body {
     text-align: left;
     color: white;
     grid-area: homeheader;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.viewheader {
+     margin-left: 10px;
+    margin-right: 10px;
+    text-align: left;
+    color: white;
+    grid-area: viewheader;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
@@ -443,7 +452,7 @@ body {
         grid-template-rows: 200px auto auto auto;
         grid-row-end: -1;
         grid-template-areas: 
-            "homeheader homeheader homeheader homeheader"
+            "viewheader viewheader viewheader viewheader"
             ". viewtabla viewtabla ."
             ". viewtabla viewtabla ."
             ". viewbotones2 viewbotones2 .";
@@ -546,7 +555,7 @@ body {
         grid-template-rows: 200px auto auto auto;
         grid-row-end: -1;
         grid-template-areas: 
-            "homeheader homeheader homeheader homeheader"
+            "viewheader viewheader . ."
             "viewtabla viewtabla . ."
             "viewtabla viewtabla . ."
             "viewbotones2 viewbotones2 . .";
