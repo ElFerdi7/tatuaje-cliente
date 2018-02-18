@@ -48,7 +48,7 @@ moduloBoceto.controller('BocetoEdit2Controller',
                         $scope.theFile = element.files[0];
 
 
-                        $scope.subida = "http://127.0.0.1:8085/images/" + $scope.theFile.name;
+                        $scope.subida = "http://127.0.0.1:8081/images/" + $scope.theFile.name;
                         reinols = $scope.subida;
 
                     });
