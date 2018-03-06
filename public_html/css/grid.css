@@ -97,6 +97,22 @@ body {
 
 }
 /*Containers*/
+.containernewedit{
+    display: grid;
+    grid-template-columns: 275px 275px 275px 275px;
+    grid-template-rows: 200px 200px 200px 225px;
+    grid-row-end: -1;
+    grid-template-areas: 
+        "neweditheader neweditheader neweditheader neweditheader"
+        ". neweditform neweditform ."
+        ". neweditform neweditform ."
+        ". neweditform neweditform .";
+    grid-gap: 10px;  
+}
+
+
+
+
 .containerremove{
     display: grid;
     grid-template-columns: 275px 275px 275px 275px;
@@ -204,11 +220,8 @@ body {
 }
 
 #droplogin {
-
     position: relative;
     display: inline-block;
-
-
 }
 
 #loginform {
@@ -228,7 +241,7 @@ body {
 }
 
 .viewheader {
-     margin-left: 10px;
+    margin-left: 10px;
     margin-right: 10px;
     text-align: left;
     color: white;
@@ -370,16 +383,37 @@ body {
     grid-area: viewbotones2;
     display: flex;
     flex-wrap: wrap;
-   
+
 }
 
 /*fin cs para view*/
 
 /*css para remove*/
+.removeheader{
+    margin-left: 10px;
+    text-align: left;
+    color: white;
+    grid-area: removeheader;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
 #removetabla {
     grid-area: removetabla;
 }
 /*fin css para remove*/
+
+/*css para newedit*/
+.neweditheader{
+    margin-left: 10px;
+    text-align: left;
+    color: white;
+    grid-area: neweditheader;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+#neweditform {
+    grid-area: neweditform;
+}
+/*fin css para newedit*/
 
 
 
@@ -474,9 +508,9 @@ body {
             ". viewtabla viewtabla ."
             ". viewbotones2 viewbotones2 .";
         grid-gap: 10px;
-         margin-top: 40px;
+        margin-top: 40px;
     }
-    
+
     .containerremove{
         display: grid;
         grid-template-columns: 275px auto auto auto;
@@ -488,7 +522,7 @@ body {
             ". removetabla removetabla ."
             ". removetabla removetabla .";
         grid-gap: 10px;
-         margin-top: 40px;
+        margin-top: 40px;
     }
 
 
@@ -579,7 +613,7 @@ body {
             "perfilbotones . .";
         grid-gap: 10px;
     }
-    
+
     .containerview{
         display: grid;
         grid-template-columns: 275px auto auto auto;
@@ -592,7 +626,7 @@ body {
             "viewbotones2 viewbotones2 . .";
         grid-gap: 10px;
     }
-    
+
     .containerremove{
         display: grid;
         grid-template-columns: 275px auto auto auto;
