@@ -97,6 +97,18 @@ body {
 
 }
 /*Containers*/
+.containerremove{
+    display: grid;
+    grid-template-columns: 275px 275px 275px 275px;
+    grid-template-rows: 200px 200px 200px 225px;
+    grid-row-end: -1;
+    grid-template-areas: 
+        "removeheader removeheader removeheader removeheader"
+        ". removetabla removetabla ."
+        ". removetabla removetabla ."
+        ". removetabla removetabla .";
+    grid-gap: 10px;
+}
 .containerview{
     display: grid;
     grid-template-columns: 275px 275px 275px 275px;
@@ -363,6 +375,11 @@ body {
 
 /*fin cs para view*/
 
+/*css para remove*/
+#removetabla {
+    grid-area: removetabla;
+}
+/*fin css para remove*/
 
 
 
@@ -456,6 +473,20 @@ body {
             ". viewtabla viewtabla ."
             ". viewtabla viewtabla ."
             ". viewbotones2 viewbotones2 .";
+        grid-gap: 10px;
+         margin-top: 40px;
+    }
+    
+    .containerremove{
+        display: grid;
+        grid-template-columns: 275px auto auto auto;
+        grid-template-rows: 200px 200px 200px 225px;
+        grid-row-end: -1;
+        grid-template-areas: 
+            "removeheader removeheader removeheader removeheader"
+            ". removetabla removetabla ."
+            ". removetabla removetabla ."
+            ". removetabla removetabla .";
         grid-gap: 10px;
          margin-top: 40px;
     }
@@ -559,6 +590,19 @@ body {
             "viewtabla viewtabla . ."
             "viewtabla viewtabla . ."
             "viewbotones2 viewbotones2 . .";
+        grid-gap: 10px;
+    }
+    
+    .containerremove{
+        display: grid;
+        grid-template-columns: 275px auto auto auto;
+        grid-template-rows: 200px 200px 200px 225px;
+        grid-row-end: -1;
+        grid-template-areas: 
+            "removeheader removeheader . ."
+            "removetabla removetabla . ."
+            "removetabla removetabla . ."
+            "removetabla removetabla . .";
         grid-gap: 10px;
     }
 
