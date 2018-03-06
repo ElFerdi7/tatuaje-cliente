@@ -219,17 +219,7 @@ body {
 
 }
 
-#droplogin {
-    position: relative;
-    display: inline-block;
-}
 
-#loginform {
-    grid-area: loginform;
-    background-color: black;
-    color: white;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
 
 .loginheader {
     margin-left: 10px;
@@ -412,6 +402,7 @@ body {
 
 #neweditform {
     grid-area: neweditform;
+    
 }
 /*fin css para newedit*/
 
@@ -466,7 +457,7 @@ body {
         grid-template-columns: 275px auto auto;
         grid-template-rows: 100px 200px 225px 225px;
         grid-template-areas: 
-            "homeheader homeheader homeheader homeheader"
+            "homeheader homeheader homeheader ."
             ". logindrop logindrop ."
             ". logindrop logindrop .";
         grid-gap: 10px;
